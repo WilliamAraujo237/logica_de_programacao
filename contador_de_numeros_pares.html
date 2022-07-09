@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTADOR</title>
+</head>
+<body>
+    <h1>contador</h1>
+</body>
+<script>
+    //função para pular linhas.
+    function pulaLinha() {
+        document.write("<br><br>");
+    }
+
+    //função para escrever.
+    function escrever (texto){
+        document.write(texto);
+        pulaLinha();
+    }
+
+    //valor inicial da conta.
+    var numeroInicial = 0;
+
+    //loop while para fazer o calculo dos numeros pares até 100.
+    while (numeroInicial != 100){
+        numeroInicial = numeroInicial + 2;
+        escrever(numeroInicial);
+    }
+
+    escrever("FIM");
+</script>
+</html>
