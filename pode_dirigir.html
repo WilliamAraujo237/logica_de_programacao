@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você pode dirigir?</title>
+</head>
+<body>
+    <h1>programa de habilitação</h1>
+</body>
+<script>
+    //função para pular linha.
+    function pulaLinha() {
+        document.write("<br>");
+    }
+    //função para escrever na tela.
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    //variaveis fornescidas pelo usuario.
+    var idade = parseInt(prompt("Qual é sua idade?"));
+    var temCarteira = prompt("Tem carteira? Responda S ou N");
+
+    // função logica que vai identificar se o usuario pode ou não dirigir.
+    if (temCarteira == "S" && idade >= 18) {
+        mostra("parabéns você pode dirigir");
+    }else{
+        mostra("você ainda não pode dirigir =( ")
+    }
+
+</script>
+</html>

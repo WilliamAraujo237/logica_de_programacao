@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de copas</title>
+</head>
+<body>
+    <h1>quantidade de copas</h1>
+</body>
+<script>
+    //função para pular linhas.
+    function pulaLinha(){
+        document.write("<br><br>");
+    }
+
+    //função para escrever na tela.
+    function escreve(texto) {
+        document.write(texto);
+        pulaLinha();
+    }
+
+    // interação do usuario.
+    var dataInicial = parseInt(prompt("digite o ano da copa que quer iniciar a contagem"));
+   
+
+    //função de repetição while.
+    while (dataInicial < 2022) {
+         dataInicial = dataInicial + 4;
+        escreve("teve compa em " + dataInicial);
+    }
+</script>
+</html>

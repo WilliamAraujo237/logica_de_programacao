@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de IMC</title>
+</head>
+<body>
+    <h1>soma de IMC</h1>
+</body>
+<script>
+     //função para pular linhas
+     function pulalinha(){
+        document.write("<br>");
+    }
+
+    //função para dividir os calculos
+    function divideInformação() {
+        document.write("<br><hr>");
+    }
+
+    //função para calcular o imc 
+    function calcularIMC(altura,peso) {
+        var imc = peso / (altura * altura);
+        document.write("calculo arredondado");
+        pulalinha();
+        document.write("o valor de imc é de: " + Math.round(imc));
+        pulalinha();
+
+        document.write("calculo completo");
+        pulalinha();
+        document.write("o valor de imc é de: " + imc);
+        divideInformação();
+        return imc;
+    }
+
+    //valores aleatórios escolhidos
+    var imcjoao = calcularIMC(1.70 , 60);
+    var imcPaulo = calcularIMC(1.90 , 33);
+
+    var soma = imcPaulo + imcjoao;
+    var arredonda = Math.round(soma);
+    document.write(soma);
+    document.write(arredonda);
+</script>
+</html>

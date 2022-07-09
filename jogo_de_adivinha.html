@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adivinhe o numero</title>
+</head>
+<body>
+    <h1>vamos jogar</h1>
+</body>
+<script>
+
+    //função para escrever.
+    function escrever(frase){
+        document.write(frase);
+    }
+
+    //função para pular linha.
+    function pulaLinha() {
+        document.write("<br><br>");
+    }
+
+    //variavel que vai escolher um numero aleatorio de 0 a 10.
+    var numero = Math.round(Math.random()*10); 
+
+    //variavel que vai pegar a resposta do usuario e vai transformar em um number.
+    var resposta = parseInt(prompt("digite um numero de 1 a 10"));
+
+    console.log(numero);
+
+    /* condição if que vai verificar que o numero escolhido pelo usuario é igual ao numero escolhido
+     pelo programa */ 
+    if(numero == resposta){
+        escrever("você acertou o resultado");
+    }else{
+        escrever("você essrou a resposta, o numero escolhido foi " + numero);
+    }
+</script>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futebol calculo de resultados</title>
+</head>
+<body>
+    <h1>quantidade de pontos do seu time</h1>
+</body>
+<script>
+
+    //função para escrever sem pular linhas
+    function escreveSimples(texto){
+        document.write(texto);
+    }
+
+    //função para pular linhas
+    function pulaLinha(){
+        document.write("<br><hr>");
+    }
+
+    //função para escrever o resultado
+    function escreve(nome,resposta) {
+        document.write(nome + " : " + resposta);
+        pulaLinha();
+    }
+
+    //função para calcular o resultado e escrever o resultado
+    function calculoResultado(vitorias,empates,nomeTime){
+        var resultadoVitorias = vitorias * 3;
+        var resultadosEmpates = empates * 1;
+        var pontos = resultadoVitorias + resultadosEmpates;   
+   
+        escreve(nomeTime,pontos);
+        return pontos;
+    }
+
+    //variaveis usando duas funções, "prompr" para pegar a interação do usuario "parseInt" para transformar string em numero.
+    var nomeDoTime = prompt("informe o nome do seu time");
+    var quantidadaDeVitorias = parseInt(prompt("informe a quantidade de vitórias de seu time")); 
+    var quantidadaDeEmpates = parseInt(prompt("informe a quantidade de vitórias de seu time")); 
+
+    // função CalculoResultado sendo chamada.
+    var pontos1= calculoResultado(quantidadaDeVitorias,quantidadaDeEmpates,nomeDoTime);
+
+    if (pontos1 > 20) {
+        document.write("seu time está melhor do que o ano passado");
+    }
+
+    if (pontos1 < 20) {
+        escreveSimples("seu time está pior que o ano passado");
+    }
+
+    if (pontos1 == 20) {
+        escreveSimples("seu time está com a mesma quantidade de pontos do ano passado");
+    }
+</script>
+</html>
