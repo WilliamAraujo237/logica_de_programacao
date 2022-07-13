@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de login</title>
+</head>
+<body>
+    <h1>tela de login</h1>
+</body>
+<script>
+    //variavel com senha e login
+    var login = "alura";
+    var senha = "alura123";
+
+    var contador = 1;
+    var contadorTentativas = 3;
+
+    while (contador <= contadorTentativas) {
+
+        var loginTentativa = prompt("digite seu login");
+        var senhaTentativa = prompt("digite sua senha");
+
+        if (loginTentativa == login && senhaTentativa == senha) {
+            alert("bem-vindo " + login);
+        } else {
+            alert("login ou senha incorretas tente novamente");
+        }   
+        
+        if (contador == 3) {
+            alert("você errou muito,<br> espere alguns minutos para tentar novamente");
+        }
+        
+        contador = contador + 1;
+    }
+
+
+</script>
+</html>

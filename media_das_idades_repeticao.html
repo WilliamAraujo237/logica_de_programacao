@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="PR-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de Idades</title>
+</head>
+<body>
+    <h1>calculando</h1>
+</body>
+<script>
+    //função para pular linha.
+    function pulaLinha() {
+        document.write("<br><br>");
+    }
+
+    //função para escrever.
+    function escreve(texto) {
+        document.write(texto);
+        pulaLinha();
+    }
+    //variavel para receber a quantidade de familiares.
+    var quantidadeFamiliares = parseInt(prompt("digite a quantodade de pessoas da sua familia"));
+    //inicio do contador.
+    var inicio = 1;
+    //variavel para guardar idades ditas pelo usuario.
+    var somaResultados = 0;
+    //loop para somar idades ditas pelo usuario.
+    while(inicio <= quantidadeFamiliares){
+        var resposta = parseInt(prompt("digite a idade do seu familiar"));
+        somaResultados = somaResultados + resposta;
+        inicio++;
+    }
+    //calculo da media das idades informadas.
+    var media = somaResultados / quantidadeFamiliares;
+    //usando a função escrever para aparecer o resultado na tela.
+    escreve("a média das idades informadas é : "+media);
+</script>
+</html>
