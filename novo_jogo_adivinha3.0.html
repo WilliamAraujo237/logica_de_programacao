@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOGO ADIVINHA</title>
+</head>
+<body>
+<h1>digite um numero de 1 a 10</h1>
+<input type="text">
+<button>vamos ver se você acertou</button>
+
+</body>
+<script>
+    //variavel para pegar informação da função input do html.
+    var input = document.querySelector("input");
+    input.focus();
+    //variavel para sortear um numero de 1 a 10.
+    var segredo = Math.round(Math.random()*10);
+
+    //console.log serve para ver no console da pagina o resultado de algo, nesse exemplo, o valor sorteado pela função segredo.
+    //console.log(segredo);
+
+    //função para verificar se o usuario acertou a resposta.
+    function verifica() {
+        if (input.value == segredo) {
+            document.write("você acertou!!!");
+            
+        }else{
+            alert("você errou, tente novamente");
+        }
+        input.value = "";
+        input.focus();
+    }
+
+    //variavel para pegar o click do usuario no button.
+    var button = document.querySelector("button");
+    //função para efetuar a função "verifica" apenas quando o usuario clicar.
+    button.onclick = verifica;
+    input.focus();
+</script>
+</html>
